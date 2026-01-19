@@ -1,0 +1,14 @@
+Scenario: 
+
+Did user enter his choice?
+ > no? Alert and stop
+    return "Enter a valid choice: "Rock, "Paper", "Scissors"
+ 
+ > yes?
+    - computer chooses
+        return a random choice between "Rock, "Paper", "Scissors"
+    - compare choices
+        . same: it's a tie! > if
+        . user wins: you win! > else if
+        . computer wins: you lose! > else
+    - return result 
