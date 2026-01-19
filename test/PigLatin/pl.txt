@@ -1,0 +1,15 @@
+Scenario: 
+
+Did user enter text?
+ -> no? Alert then stop 
+        return "Enter a valid text after 'Node piglatin3.js'"
+
+ -> yes? 
+    - convert result into an array of strings
+        . for each string: 
+            _ if string starts with consonant, move first letter to end + add AY to string
+            _ if string starts with vowel, add AY to string
+            _ if string starts with 2 consonants, move 2 first letters to end + add AY to string
+            _ convert array into a single string 
+
+
